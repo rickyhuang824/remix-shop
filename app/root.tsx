@@ -12,18 +12,20 @@ import NavBar from "./components/navigation";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-slate-100 font-prompt">
+    <html lang="en" className="font-prompt">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        <NavBar />
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+      <body className="h-screen bg-slate-100">
+        <div className="h-full flex flex-col">
+          <NavBar />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </div>
       </body>
     </html>
   );
